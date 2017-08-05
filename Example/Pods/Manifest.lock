@@ -1,5 +1,5 @@
 PODS:
-  - Versioner (0.1.0)
+  - Versioner (1.0)
 
 DEPENDENCIES:
   - Versioner (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Versioner: 6b1e353472cdba4dfc23722f0f97b5250eb3b1ed
+  Versioner: addefbb9f13e8b77aa734b854101c80d2071dc15
 
-PODFILE CHECKSUM: f1e889358604458fda175401a955cd148c94d880
+PODFILE CHECKSUM: 37403d9f07dc511c1b808ef0c7473b42f0821f4e
 
 COCOAPODS: 1.2.1

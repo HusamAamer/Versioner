@@ -1,9 +1,9 @@
 {
   "name": "Versioner",
-  "version": "0.1.0",
-  "summary": "A short description of Versioner.",
+  "version": "1.0",
+  "summary": "Groundbreaking version tracker .",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/ababel2007@yahoo.com/Versioner",
+  "homepage": "https://github.com/HusamAamer/Versioner",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "ababel2007@yahoo.com": "ababel2007@yahoo.com"
   },
   "source": {
-    "git": "https://github.com/ababel2007@yahoo.com/Versioner.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/HusamAamer/Versioner.git",
+    "tag": "1.0"
   },
   "platforms": {
     "ios": "8.0"
