@@ -8,14 +8,14 @@
 
 import UIKit
 import Versioner
+import Kingfisher
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        Versioner()
-        
+        Versioner.initiate()
     }
 
     override func didReceiveMemoryWarning() {
