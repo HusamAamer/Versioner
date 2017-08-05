@@ -1,9 +1,7 @@
 PODS:
-  - Kingfisher (3.10.4)
   - Versioner (1.0)
 
 DEPENDENCIES:
-  - Kingfisher
   - Versioner (from `../`)
 
 EXTERNAL SOURCES:
@@ -11,9 +9,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Kingfisher: dc3a4983e86d2dfa89513664983a82340c11a289
   Versioner: 71e9905479cdf0020f376c754f798b996892c3e8
 
-PODFILE CHECKSUM: 60535fcb89203b4a401d1b32c894bedf95462d7e
+PODFILE CHECKSUM: 12b325ae26ce23b71a88d31ec7aba95acd5ef94f
 
 COCOAPODS: 1.2.1

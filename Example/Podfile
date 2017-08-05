@@ -2,9 +2,8 @@ use_frameworks!
 
 target 'Versioner_Example' do
     pod 'Versioner', :path => '../'
-    pod 'Kingfisher'
-    
-  target 'Versioner_Tests' do
+
+target 'Versioner_Tests' do
     inherit! :search_paths
 
     
