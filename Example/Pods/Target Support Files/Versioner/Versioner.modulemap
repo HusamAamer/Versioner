@@ -1,6 +1,0 @@
-framework module Versioner {
-  umbrella header "Versioner-umbrella.h"
-
-  export *
-  module * { export * }
-}
