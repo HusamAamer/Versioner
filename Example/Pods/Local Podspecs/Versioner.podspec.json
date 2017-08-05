@@ -2,6 +2,7 @@
   "name": "Versioner",
   "version": "1.0",
   "summary": "Groundbreaking version tracker .",
+  "requires_arc": true,
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/HusamAamer/Versioner",
   "license": {
@@ -18,5 +19,5 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "Versioner/Classes/**/*"
+  "source_files": "Versioner/Classes/*.swift"
 }
