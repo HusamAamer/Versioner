@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Versioner_Example' do
+  pod 'Versioner', :path => '../'
+
+  target 'Versioner_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
