@@ -7,11 +7,67 @@
 
 Your **app version tracker**.
 
-## Example
+# Usages 
+## #1 : Events
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+* App installed.
+```
+Versioner.currentVersion.isFreshInstall {
+	// Welcome user
+}
+```
 
-## Requirements
+* App updated.
+```swift
+Versioner.currentVersion.isUpdate { (prevVersion) in 
+	// Show new features
+}
+```
+
+* App downgraded
+```
+Versioner.currentVersion.isDowngrade { (prevVersion) in 
+	// Disable app or prompt to update
+}
+```
+* App build updated.
+```
+Versioner.currentVersion.isBuildUpdate { (prevVersion) in 
+	// Notify tester
+}
+```
+* App build downgraded.
+```
+Versioner.currentVersion.isBuildDowngrade { (prevVersion) in 
+	// Clean app data directory or make core data model changes ... etc
+}
+```
+* App launched with number X.
+```
+Versioner.currentVersion.isLaunch(number: 3) { (prevVersion) in 
+	/* 
+	Launch number X of this version (not all versions together),
+                        X = any number you want */
+
+}
+```
+
+## #2 : Version check
+```
+        if Versioner.currentVersion > AppVersion("3.0") {
+            // Do new code
+            //      ex: call new backend
+        } else {
+            // Do old code
+            //      ex: call old backend
+        }
+```
+## #3 : Operators 
+```
+print(Versioner.currentVersion > AppVersion("3.0.0.1")) // true or false
+print(AppVersion("3.0") < AppVersion("3.1")) // true
+print(AppVersion("3.0") == AppVersion("3.0")) // true
+```
 
 ## Installation
 
@@ -20,6 +76,11 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod "Versioner"
+```
+
+Then add this line to `application didFinishLaunchingWithOptions` in your AppDelegate before calling any api method.
+```
+Versioner.initiate()
 ```
 
 ## Author
