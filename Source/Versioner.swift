@@ -13,14 +13,14 @@ fileprivate enum AVConst {
     static let AV_DefaultsKey = "_AV_AppVersions"
     
     /// Return current app version
-    fileprivate static var v_CFBundleShortVersionString : String {
+    static var v_CFBundleShortVersionString : String {
         get {
             return Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
         }
     }
     
     /// Returns current build number
-    fileprivate static var v_kCFBundleVersionKey : String {
+    static var v_kCFBundleVersionKey : String {
         get {
             return Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as! String
         }
@@ -28,13 +28,13 @@ fileprivate enum AVConst {
 }
 
 
-class Versioner: NSObject {
+public class Versioner: NSObject {
     /// UserDefaults short approache
     private static var defaults  = UserDefaults.standard
     
-    static var SavedVersions : [AppVersion] = loadSavedVersions()
+    public static var SavedVersions : [AppVersion] = loadSavedVersions()
     
-    static var currentVersion : CurrentVersion {
+    public static var currentVersion : CurrentVersion {
         get {
             if let s = SavedVersions.last {
                 return CurrentVersion.init(s.number, build: s.build, launchNumber: s.launchNumber)
@@ -50,7 +50,7 @@ class Versioner: NSObject {
     override init() {
         super.init()
     }
-    class func initiate () {
+    class public func initiate () {
         
         if let lastSavedV = SavedVersions.last {
             
@@ -68,7 +68,7 @@ class Versioner: NSObject {
     /* 
             Save current version number with info in UserDefaults
      */
-    fileprivate static func registerThisVersion () {
+    private static func registerThisVersion () {
         var array = Versioner.SavedVersions
         let cur_ver = AppVersion.init(AVConst.v_CFBundleShortVersionString,
                                       build: AVConst.v_kCFBundleVersionKey)
@@ -103,11 +103,4 @@ class Versioner: NSObject {
         }
         return []
     }
-    
-    /*
-     *
-     *   STATIC FUNCTIONS AND PARAMETERS
-     *
-     */
-    
 }
