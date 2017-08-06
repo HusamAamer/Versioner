@@ -13,7 +13,7 @@ Your **app version tracker**.
 ## #1 : Events
 
 * App installed.
-```
+```swift
 Versioner.currentVersion.isFreshInstall {
 	// Welcome user
 }
@@ -27,25 +27,25 @@ Versioner.currentVersion.isUpdate { (prevVersion) in
 ```
 
 * App downgraded
-```
+```swift
 Versioner.currentVersion.isDowngrade { (prevVersion) in 
 	// Disable app or prompt to update
 }
 ```
 * App build updated.
-```
+```swift
 Versioner.currentVersion.isBuildUpdate { (prevVersion) in 
 	// Notify tester
 }
 ```
 * App build downgraded.
-```
+```swift
 Versioner.currentVersion.isBuildDowngrade { (prevVersion) in 
 	// Clean app data directory or make core data model changes ... etc
 }
 ```
 * App launched with number X.
-```
+```swift
 Versioner.currentVersion.isLaunch(number: 3) { (prevVersion) in 
 	/* 
 	Launch number X of this version (not all versions together),
@@ -55,7 +55,7 @@ Versioner.currentVersion.isLaunch(number: 3) { (prevVersion) in
 ```
 
 ## #2 : CurrentVersion info
-```
+```swift
 Versioner.currentVersion.number 	 // Marketing or iTunesConnect version
 Versioner.currentVersion.build 		 // Build number
 Versioner.currentVersion.launchNumber	 // Number of app launches during this version
@@ -65,7 +65,7 @@ Versioner.currentVersion.os_version	 // OS Version when this version first insta
 ## #3 : Operators and Version check 
  
  Execute another specific code in future release
-```
+```swift
 if Versioner.currentVersion > AppVersion("3.0") {
 	// Do new code
         //      ex: call new backend
@@ -74,7 +74,7 @@ if Versioner.currentVersion > AppVersion("3.0") {
 	//      ex: call old backend
 }
 ```
-```
+```swift
 print(Versioner.currentVersion > AppVersion("3.0.0.1")) // true or false
 print(AppVersion("3.0") < AppVersion("3.1")) // true
 print(AppVersion("3.0") == AppVersion("3.0")) // true
@@ -90,7 +90,7 @@ pod "Versioner"
 ```
 
 Then add this line to `application didFinishLaunchingWithOptions` before calling any api method.
-```
+```swift
 Versioner.initiate()
 ```
 
