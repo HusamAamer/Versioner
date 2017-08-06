@@ -108,7 +108,7 @@ class ViewController: UIViewController {
         
         
         ////////////////////////////////////////////////////////////
-        // :: Usage #2 => Execute specific code depening on app version
+        // :: Usage #2 => Execute another specific code in future relase
         ////////////////////////////////////////////////////////////
         if Versioner.currentVersion > AppVersion("3.0") {
             // Do new code

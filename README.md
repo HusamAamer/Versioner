@@ -52,7 +52,9 @@ Versioner.currentVersion.isLaunch(number: 3) { (prevVersion) in
 }
 ```
 
-## #2 : Version check
+## #2 : Operators and Version check 
+ 
+ Execute another specific code in future release
 ```
         if Versioner.currentVersion > AppVersion("3.0") {
             // Do new code
@@ -62,7 +64,6 @@ Versioner.currentVersion.isLaunch(number: 3) { (prevVersion) in
             //      ex: call old backend
         }
 ```
-## #3 : Operators 
 ```
 print(Versioner.currentVersion > AppVersion("3.0.0.1")) // true or false
 print(AppVersion("3.0") < AppVersion("3.1")) // true

@@ -19,7 +19,8 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Versioner helps you detect if this is a fresh install, version update or other version state changes through a neat closures.
+It has operators for versions comparison that gives you the ability to write code for future releases depening on app version without the need to delete old code.
                        DESC
 
   s.homepage         = 'https://github.com/HusamAamer/Versioner'
