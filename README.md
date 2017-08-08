@@ -1,4 +1,4 @@
-<a href="https://swift.org" target="_blank"><img src="https://img.shields.io/badge/Language-Swift%203-orange.svg" alt="Language Swift 3"></a>
+<a href="https://swift.org" target="_blank"><img src="https://img.shields.io/badge/Language-Swift%203-orange.svg" alt="Language Swift 3 & 4"></a>
 [![CI Status](http://img.shields.io/travis/ababel2007@yahoo.com/Versioner.svg?style=flat)](https://travis-ci.org/ababel2007@yahoo.com/Versioner)
 [![Version](https://img.shields.io/cocoapods/v/Versioner.svg?style=flat)](http://cocoapods.org/pods/Versioner)
 [![License](https://img.shields.io/cocoapods/l/Versioner.svg?style=flat)](http://cocoapods.org/pods/Versioner)
